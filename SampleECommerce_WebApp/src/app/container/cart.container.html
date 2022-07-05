@@ -1,0 +1,14 @@
+<div class="col-md-12 container">
+
+  <country></country>
+
+  <ng-template [ngIf]="showProductList" [ngIfElse]="checkout">
+    <products (changeDisplayEvent)="onComponentSwitch($event)"></products>
+  </ng-template>
+
+  <ng-template #checkout>
+    <cart-details (changeDisplayEvent)="onComponentSwitch($event)" ></cart-details>
+  </ng-template>
+
+
+</div>

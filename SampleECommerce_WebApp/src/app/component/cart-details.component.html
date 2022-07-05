@@ -1,0 +1,61 @@
+<div class="col-md-12 container" >
+
+  <div style="margin:30px">
+    <div class="row"><strong> Cart Details </strong></div>
+
+    <div class="row" style="background-color:lightblue;">
+      <div class="col-md-4"> Product </div>
+      <div class="col-md-4"> Price </div>
+      <div class="col-md-4" style="background-color: lightgray;"> </div>
+    </div>
+
+    <div class="row" *ngFor="let product of cart">
+      <div class="col-md-4">
+        {{ product.productName }}
+      </div>
+      <div class="col-md-2">
+        {{ product.sellPrice| number : '1.2-2' | noComma | currency : country.currencyCode }}
+      </div>
+      <div class="col-md-2">
+        <input type="button" class="btn btn-danger btn-sm" value="Remove from Basket" (click)="removeProductFromCart(product)" />
+      </div>
+      <div class="col-md-4"></div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-3" style="text-align:right">Subtotal</div>
+      <div class="col-md-2">
+        {{ subTotal | number : '1.2-2' | noComma | currency : country.currencyCode }}
+      </div>
+      <div class="col-md-6"></div>
+    </div>
+    <div class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-3" style="text-align:right">Shipping</div>
+      <div class="col-md-2">
+        {{ shipping | number : '1.2-2' | noComma | currency : country.currencyCode }}
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+    <div class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-3" style="text-align:right">Total</div>
+      <div class="col-md-2">
+        {{ total | number : '1.2-2' | noComma | currency : country.currencyCode }}
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-md-2" style="text-align: left;">
+        <input type="button" class="btn btn-primary btn-sm" value="Back to Product List" (click)="displayProductList();" />
+      </div>
+      <div class="col-md-2"></div>
+      <div class="col-md-4" style="text-align: right;">
+        <input *ngIf="this.total > 0" type="button" class="btn btn-primary btn-sm" value="Place Order" (click)="placeAnOrder();" />
+      </div>
+      <div class="col-md-4"> </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,85 @@
+ 
+.card {
+    min-width: 100% !important;
+    margin-top: 15px;
+    box-shadow: 0px 2px rgb(226, 226, 226);
+    color: #808080;
+  
+}
+
+.card-header
+{
+    padding: .75rem 0.75rem !important;
+
+}
+.card-body
+{
+
+    padding: .75rem 0.75rem .75rem 1.75rem !important;
+}
+.body-border-bottom {
+    border-bottom: solid 1px #d8d8d8;
+}
+
+.initial {
+    background: #ff7b12;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 30px;
+    line-height: 50px;
+    color: #ffffff;
+    text-align: center;
+    display: inline-block !important;
+}
+
+.btn-primary {
+    background-color: lightblue !important;
+    border-color: lightblue !important;
+    color: black !important;
+    margin:5px;
+}
+.btn-secondary {
+    background-color: #EEEEEE !important;
+    border-color: #EEEEEE !important;
+    color:#000000 !important;
+}
+
+.btn-danger {
+  margin: 5px;
+}
+
+
+
+
+.name {
+  font-weight: bold;
+  color: #000000;
+}
+
+.initial-details {
+    float: right;
+    width: 95%;
+}
+
+div.row-border-bottom div {
+    margin-right: 15px;
+    font-size: 16px;
+}
+ .info{
+
+    color: #FF7B12;
+    margin-right: 15px;
+    font-size: 16px;
+    font-weight: bold;
+
+ }
+
+.smalltext {
+    font-size: 13px;
+}
+div.row .smalltext p
+{
+margin: 2px !important;
+
+}

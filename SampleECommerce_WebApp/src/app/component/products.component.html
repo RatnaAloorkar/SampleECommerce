@@ -1,0 +1,35 @@
+
+<div class="col-md-12 container" >
+
+  <div style="margin:30px">
+   <div class="row" style="background-color:lightblue;">
+      <div class="col-md-4"> Product </div>
+      <div class="col-md-4"> Price </div>
+      <div class="col-md-4" style="background-color: lightgray;"> </div>
+    </div>
+
+    <div class="row" *ngFor="let product of cartProducts">
+      <div class="col-md-4">
+        {{ product.name }}
+      </div>
+      <div class="col-md-2">
+        {{ product.sellingPrice| number : '1.2-2' | noComma | currency : country.currencyCode }}
+      </div>
+      <div class="col-md-2">
+        <input type="button" class="btn btn-primary btn-sm" value="Add to Basket" (click)="addProductToCart(product)" />
+      </div>
+      <div class="col-md-4"></div>
+    </div>
+    <div class="row" style="margin-top:10px;" class="col-md-8">
+      <div style="float: right;">
+        <strong>Your Basket: &nbsp;  </strong>{{ itemsInBasket | SingularPlural: 'Item' }} for {{ total | number : '1.2-2' | noComma | currency : country.currencyCode }}
+        <input *ngIf="this.itemsInBasket > 0" type="button" class="btn btn-primary btn-sm" value="Go to Basket" (click)="goToBasket();" />
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+

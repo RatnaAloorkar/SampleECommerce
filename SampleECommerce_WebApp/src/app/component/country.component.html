@@ -1,0 +1,6 @@
+<div class="row" style="margin-top:10px">
+  <strong> Country: </strong>
+  <select style="background-color: lightblue;" [(ngModel)]="selectedCountry" (change)="onCountryChange(selectedCountry)">
+    <option style="background-color: lightblue;" *ngFor="let country of countriesList" [ngValue]="country">{{country.name}}</option>
+  </select>
+</div>
